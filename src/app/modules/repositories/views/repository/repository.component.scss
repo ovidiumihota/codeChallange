@@ -16,6 +16,7 @@
       padding: 0.4rem 0.4rem;
       width: calc(100% - 4rem);
       transition: color .5ms ease;
+      display: inline-flex;
 
       .clickable {
         &:hover {
