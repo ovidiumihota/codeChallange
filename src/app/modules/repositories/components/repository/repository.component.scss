@@ -1,0 +1,34 @@
+.repository {
+
+  .repository-preview,
+  .repository-full {
+    margin: 0.4rem 1.6rem;
+    padding: 0.4em 0.4em;
+
+    .label,
+    .value {
+      font-size: 0.8rem;
+    }
+
+    .label {
+      margin-right: 0.2rem;
+      color: rgba(51, 51, 51, 1);
+    }
+
+    .value {
+      color: rgba(51, 51, 51, 0.75);
+    }
+  }
+
+  .repository-preview {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.25);
+    transition: background-color 0.5ms ease-in;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(51, 51, 51, 0.25);
+    }
+  }
+
+  .repository-full {}
+}

@@ -1,0 +1,34 @@
+.repository-view {
+  width: 100%;
+
+  .repository-title,
+  .repository-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .repository-title {
+    text-transform: uppercase;
+    font-weight: bold;
+
+    h3 {
+      margin: 0.4rem 1.6rem;
+      padding: 0.4rem 0.4rem;
+      width: calc(100% - 4rem);
+      transition: color .5ms ease;
+
+      .clickable {
+        &:hover {
+          color: rgba(51, 51, 51, 0.75);
+          cursor: pointer;
+        }
+      }
+
+      .spacer {
+        margin: 0 0.2rem;
+      }
+    }
+  }
+
+  .repository-container {}
+}

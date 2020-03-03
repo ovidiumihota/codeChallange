@@ -1,0 +1,15 @@
+<div class="repository-view">
+  <div class="repository-title">
+    <h3>
+      <div class="clickable" (click)="onNavigate('home')">Home</div>
+      <div class="spacer">{{" >> "}}</div>
+      <div class="clickable" (click)="onNavigate('repositories')">Repositories</div>
+      <div class="spacer">{{" >> "}}</div>
+      <div>Repository</div>
+    </h3>
+  </div>
+  <div class="repository-container">
+    <app-repository-component [repository]="repository" [mode]="'full'">
+    </app-repository-component>
+  </div>
+</div>

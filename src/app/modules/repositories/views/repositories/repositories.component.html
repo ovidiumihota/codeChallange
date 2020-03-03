@@ -1,0 +1,31 @@
+<div #repositoriesView class="repositories-view">
+  <div class="repositories-title">
+    <h3>
+      <div class="clickable" (click)="onNavigate('home')">Home</div>
+      <div class="spacer">{{" >> "}}</div>
+      <div>Repositories</div>
+    </h3>
+  </div>
+  <div class="repositories-search">
+    <input [(ngModel)]="query.q" (keydown)="onSearchKeydown($event)"
+      placeholder="Search. Ex:'tetris language:assembly'" />
+  </div>
+  <ng-container *ngIf="repositories && repositories.length > 0">
+    <div class="repositories-container">
+      <ng-container *ngIf="!isLoading ; else loading">
+        <app-repository-component [repository]="repository" [mode]="'preview'" *ngFor="let repository of repositories"
+          (click)="onSelectRepository(repository)">
+        </app-repository-component>
+        <div class="repositories-pagination">
+          <div (click)="onChangePage('previous')">Previous</div>
+          <div (click)="onChangePage('next')">Next</div>
+        </div>
+      </ng-container>
+      <ng-template #loading>
+        <div class="loading">
+          ...Loading
+        </div>
+      </ng-template>
+    </div>
+  </ng-container>
+</div>

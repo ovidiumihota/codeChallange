@@ -1,0 +1,47 @@
+<div class="repository">
+  <ng-container *ngIf="repository">
+    <div class="repository-preview" *ngIf="isPreview()">
+      <ng-container *ngTemplateOutlet="repositoryBase"></ng-container>
+    </div>
+    <div class="repository-full" *ngIf="isFull()">
+      <ng-container *ngTemplateOutlet="repositoryBase"></ng-container>
+      <ng-container *ngTemplateOutlet="repositoryDetails"></ng-container>
+    </div>
+  </ng-container>
+
+  <ng-template #repositoryBase>
+    <div>
+      <span class="label">Repository name:</span>
+      <span class="value">{{repository.name}}</span>
+    </div>
+    <div>
+      <span class="label">Repository description:</span>
+      <span class="value">{{repository.description}}</span>
+    </div>
+  </ng-template>
+  <ng-template #repositoryDetails>
+    <div>
+      <span class="label">Repository url:</span>
+      <span class="value">{{repository.url}}</span>
+    </div>
+    <div>
+      <span class="label">Repository language:</span>
+      <span class="value">{{repository.language}}</span>
+    </div>
+    <div>
+      <span class="label">Repository forks_count:</span>
+      <span class="value">{{repository.forks_count}}</span>
+    </div>
+    <div>
+      <span class="label">Repository git_url:</span>
+      <span class="value">{{repository.git_url}}</span>
+    </div>
+    <div>
+      <span class="label">Repository created_at:</span>
+      <span class="value">{{repository.created_at | date}}</span>
+    </div>
+    <div>
+      <span class="label">Repository updated_at:</span>
+      <span class="value">{{repository.updated_at | date}}</span>
+    </div>
+  </ng-template>

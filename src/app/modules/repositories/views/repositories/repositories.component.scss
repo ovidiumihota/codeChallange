@@ -1,0 +1,96 @@
+.repositories-view {
+  width: 100%;
+
+  .repositories-search,
+  .repositories-container,
+  .repositories-pagination,
+  .repositories-title {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .repositories-title {
+    text-transform: uppercase;
+    font-weight: bold;
+
+    h3 {
+      margin: 0.4rem 1.6rem;
+      padding: 0.4rem 0.4rem;
+      width: calc(100% - 4rem);
+      display: inline-flex;
+      transition: color .5ms ease;
+
+      .clickable {
+        &:hover {
+          color: rgba(51, 51, 51, 0.75);
+          cursor: pointer;
+        }
+      }
+
+      .spacer {
+        margin: 0 0.2rem;
+      }
+    }
+  }
+
+  .repositories-search {
+
+    input {
+      width: 100%;
+      margin: 0.4rem 1.6rem 0.8rem 1.6rem;
+      padding: 0.6rem 0.4rem;
+      width: calc(100% - 4rem);
+
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 2px solid rgba(51, 51, 51, 0.25);
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .repositories-container {
+
+    .loading {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(51, 51, 51, 0.25);
+    }
+  }
+
+
+  .repositories-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+
+    >* {
+      cursor: pointer;
+      margin: 0 1rem;
+      padding: 0.4rem;
+      color: rgba(51, 51, 51, 1);
+      border: 1px solid rgba(51, 51, 51, 1);
+      min-width: 80px;
+      text-align: center;
+      font-size: 0.8rem;
+
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(51, 51, 51, 1);
+      }
+    }
+  }
+}
